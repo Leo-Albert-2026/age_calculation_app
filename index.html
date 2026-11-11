@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Age Calculation App</title>
+  <!-- Create Logo -->
+  <link rel="icon" href="/age_calculation_app/assets/logo-DcPi7xZV.png">
+  <!-- Font Family  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <script>
+    if(localStorage.getItem("Mode") === "Dark") {
+        document.documentElement.classList.add("dark");
+    }
+  </script>
+  <script type="module" crossorigin src="/age_calculation_app/assets/index-yfeYQWpO.js"></script>
+  <link rel="stylesheet" crossorigin href="/age_calculation_app/assets/index-Ddb7JMOI.css">
+</head>
+<body class="font-poppins bg-grey-100 dark:bg-[#261c54] transition [user-select:none]">
+  <div class="w-full h-screen flex justify-center items-center">
+    <div class="bg-white dark:bg-[#616161] transition w-130 mx-3.5 px-2 py-5 sm:px-11.25 rounded-[20px] rounded-br-[130px]">
+      <form action="" class="py-7.5 relative text-grey-500 dark:text-black font-bold flex gap-6 border-b-[1.5px] border-b-grey-200 border-b-solid">
+        <div class="date">
+          <label for="DAY">DAY</label>
+          <input id="DAY" class="day" type="text" placeholder="DD" inputmode="numeric" pattern="[0-9]*">
+          <div class="under-input"></div>
+        </div>
+        <div class="date">
+          <label for="MONTH">MONTH</label>
+          <input id="MONTH" class="month" type="text" placeholder="MM" inputmode="numeric" pattern="[0-9]*">
+          <div class="under-input"></div>
+        </div>
+        <div class="date">
+          <label for="YEAR">YEAR</label>
+          <input id="YEAR" class="year" type="text" placeholder="YYYY" inputmode="numeric" pattern="[0-9]*">
+          <div class="under-input"></div>
+        </div>
+        <button type="submit" class="btn absolute -bottom-6.25 right-1/2 sm:right-0">
+          <span class="sr-only">Calculate Age</span>
+          <svg class="size-12.5 p-3 cursor-pointer bg-purple-500 hover:bg-black transition rounded-full" xmlns="http://www.w3.org/2000/svg" width="46" height="44" viewBox="0 0 46 44"><g fill="none" stroke="#FFF" stroke-width="2"><path d="M1 22.019C8.333 21.686 23 25.616 23 44M23 44V0M45 22.019C37.667 21.686 23 25.616 23 44"/></g></svg>
+        </button>
+      </form>
+      <div class="result my-3.75 font-bold text-[45px]">
+        <div class=""><span class="yearText text-purple-500">--</span> years</div>
+        <div class=""><span class="monthText text-purple-500">--</span> months</div>
+        <div class=""><span class="dayText text-purple-500">--</span> days</div>
+      </div>
+    </div>
+  </div>
+  <div class="toggle w-40 h-20 rounded-[40px] bg-[#ddd] dark:bg-green-700 fixed top-10 left-15 cursor-pointer">
+    <span class="bg-white size-12.5 absolute rounded-full top-1/2 transform-[translate(-50%,-50%)] transition-all duration-700 left-1/4 dark:left-3/4"></span>
+    <div class="mode flex justify-center items-center absolute z-20 size-full text-[30px] transition font-bold">Light</div>
+  </div>
+</body>
+</html>
